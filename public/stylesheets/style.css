@@ -1,0 +1,78 @@
+body {
+  background-color: #BED0CD;
+  padding-left: 50px;
+  padding-top:10px;
+  padding-bottom: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+input#recherche,#nameInputed{
+  width : 150px;
+  margin: 0;
+}
+button{
+  background:  #EBECEC;
+}
+input#search{
+  background :white;
+}
+input#nomcreat,input#prenomcreat,input#groupecreat{
+  width : 100px;
+  margin-top: 3px;
+}
+input{
+  width : 70px;
+  margin: 0;
+  background :#87ACA3;
+}
+
+
+
+#groups{
+  
+  border : solid 2px #404040;
+ position:absolute;
+  top: 90px;
+  margin-left: 45%;
+}
+#titleG{
+  position:absolute;
+  top: 3%;
+  margin-left: 45%;
+}
+#titleL{
+  position:absolute;
+  top: 150px;
+  margin-left: 45%;
+}
+.studentslist{
+
+  border : solid 2px #404040;
+  padding : 4px;
+ margin-left: 45%;
+  position:absolute;
+  top: 210px;
+}
+tr{
+  border : solid thin #404040;
+  background-color : #87ACA3;
+}
+
+
+h2.title {
+  margin-bottom : 5px;
+}
+
+
+
+
+td {
+  text-align : center;
+}
+
+span.deleted {
+  color : #888888;
+}

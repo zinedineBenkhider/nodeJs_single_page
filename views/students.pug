@@ -1,0 +1,83 @@
+extends layout
+
+append headblock
+  script(src="/javascripts/bundle.js")
+  title s
+block content
+
+  h2 Filter the students By Group :
+  form(action="/" method="get")
+
+    p| Choisissez un numero du groupe :
+    input#recherche(placeholder="group" type='number' step='1'  min='1' max='6')
+  button#searchByGroupe search
+
+
+  h2 Filter the students By Last Name :
+  form(action="/" method="get")
+    p| Enter a student's last name :
+    input#nameInputed(placeholder="last name", value= "")
+  button#searchByName search
+
+  h2#titleC Creat new student :
+  p| Enter the student's informations :
+  form(action="/" method="post")
+    table.booklist
+     tr.book
+      td Name
+      td Last name
+      td Group
+     tr.book
+      td
+         input#nomcreat(placeholder="first name", value= "")
+      td
+         input#prenomcreat(placeholder="last name", value= "")
+      td
+         input#groupecreat(placeholder="group" type='number' step='1' value='' min='1' max='6')
+  button#post create
+  h2#titleL List Of Students :
+
+  table#table.studentslist
+    tr
+      td Name
+      td Last name
+      td Group
+      td Update
+      td Undo
+      td Delete
+
+    each student, index in students
+      - var n=student._id+"n"
+      - var p=student._id+"p"
+      - var g=student._id+"g"
+      tr(data-groupe= student.group)
+        td
+          input(id=n, placeholder="first name", value= student.name)
+        td
+          input(id=p,placeholder="last name", value= student.lastName)
+        td
+          input(id=g,type='group' step='1' value=student.group min='1' max='6')
+        td
+         button.put(data-studentid= student._id) Save
+        td
+         button.annuler(data-student= student) Cancel
+        td
+         button.delete(data-studentid= student._id)  Delete
+
+  h2#titleG Number of students in each group :
+  table#groups
+      tr
+        td Group 1
+        td Group 2
+        td Group 3
+        td Group 4
+        td Group 5
+        td Group 6
+      tr
+        td#groupe1
+        td#groupe2
+        td#groupe3
+        td#groupe4
+        td#groupe5
+        td#groupe6
+  p| © Directed by zinedine Benkhider
