@@ -1,7 +1,7 @@
 var mongoose = require('mongoose');
 mongoose.Promise = global.Promise;
 
-var dbURI = 'mongodb://zinedineBnk:Boubibooba06@cluster0-shard-00-00.xq8t8.mongodb.net:27017,cluster0-shard-00-01.xq8t8.mongodb.net:27017,cluster0-shard-00-02.xq8t8.mongodb.net:27017/<dbname>?ssl=true&replicaSet=atlas-2ded0r-shard-0&authSource=admin&retryWrites=true&w=majority';
+var dbURI = 'mongodb://zinedineBnk:password@cluster0-shard-00-00.xq8t8.mongodb.net:27017,cluster0-shard-00-01.xq8t8.mongodb.net:27017,cluster0-shard-00-02.xq8t8.mongodb.net:27017/<dbname>?ssl=true&replicaSet=atlas-2ded0r-shard-0&authSource=admin&retryWrites=true&w=majority';
 var dbConnection = mongoose.createConnection(dbURI);
 
 
